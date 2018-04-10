@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var githubRoutes = require('./routes')
 var app = express();
 
 // uncomment after placing your favicon in /public
@@ -17,10 +17,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // ADD ROUTES HERE
-// 
-// 
-// 
-// 
+app.use(githubRoutes)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

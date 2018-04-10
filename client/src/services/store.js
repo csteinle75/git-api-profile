@@ -1,11 +1,10 @@
 import {createStore, combineReducers} from 'redux'
 
-// import reducers here
+import githubReducer from "reducers/githubReducer"
 
 const rootReducer = combineReducers(
   { 
-    'null':null // delete this
-    // namespace your reducers here
+    githubReducer: githubReducer
   }
 )
 
